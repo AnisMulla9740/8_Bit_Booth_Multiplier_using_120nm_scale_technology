@@ -1,0 +1,103 @@
+USER SYMBOL by DSCH 3.9
+DATE 3/25/2025 3:46:48 PM
+SYM  #shiftregister
+BB(0,0,40,120)
+TITLE 10 -7  #shiftregister
+MODEL 6000
+REC(5,5,30,110)
+PIN(0,110,0.00,0.00)S
+PIN(0,90,0.00,0.00)I7
+PIN(0,10,0.00,0.00)clk1
+PIN(0,80,0.00,0.00)I6
+PIN(0,60,0.00,0.00)I4
+PIN(0,70,0.00,0.00)I5
+PIN(0,50,0.00,0.00)I3
+PIN(0,20,0.00,0.00)I0
+PIN(0,100,0.00,0.00)in
+PIN(0,30,0.00,0.00)I1
+PIN(0,40,0.00,0.00)I2
+PIN(40,80,2.00,1.00)O7
+PIN(40,70,2.00,1.00)O6
+PIN(40,60,2.00,1.00)O5
+PIN(40,50,2.00,1.00)O4
+PIN(40,40,2.00,1.00)O3
+PIN(40,30,2.00,1.00)O2
+PIN(40,20,2.00,1.00)O1
+PIN(40,10,2.00,1.00)O0
+LIG(0,110,5,110)
+LIG(0,90,5,90)
+LIG(0,10,5,10)
+LIG(0,80,5,80)
+LIG(0,60,5,60)
+LIG(0,70,5,70)
+LIG(0,50,5,50)
+LIG(0,20,5,20)
+LIG(0,100,5,100)
+LIG(0,30,5,30)
+LIG(0,40,5,40)
+LIG(35,80,40,80)
+LIG(35,70,40,70)
+LIG(35,60,40,60)
+LIG(35,50,40,50)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,115)
+LIG(5,5,35,5)
+LIG(35,5,35,115)
+LIG(35,115,5,115)
+VLG module shiftregister( S,I7,clk1,I6,I4,I5,I3,I0,
+VLG  in,I1,I2,O7,O6,O5,O4,O3,
+VLG  O2,O1,O0);
+VLG  input S,I7,clk1,I6,I4,I5,I3,I0;
+VLG  input in,I1,I2;
+VLG  output O7,O6,O5,O4,O3,O2,O1,O0;
+VLG  wire w4,w5,w7,w9,w10,w11,w13,w14;
+VLG  wire w15,w16,w17,w18,w21,w22,w23,w24;
+VLG  wire w25,w26,w29,w30,w31,w33,w34,w35;
+VLG  wire w37,w38,w39,w40,w41,w42,w44,w45;
+VLG  wire w47,w48,w51,w52,w53,w54,w56,w58;
+VLG  wire w59,w60,w61,w62,w63,w65,w67,w68;
+VLG  dreg #(24) dreg_1(O7,w7,w4,w5,clk1);
+VLG  not #(1) inv_2(w9,S);
+VLG  or #(2) or2_3(w4,w10,w11);
+VLG  and #(2) and2_4(w11,w9,O6);
+VLG  and #(2) and2_5(w10,S,I7);
+VLG  dreg #(24) dreg_6(O6,w15,w13,w14,clk1);
+VLG  not #(1) inv_7(w16,S);
+VLG  or #(2) or2_8(w13,w17,w18);
+VLG  and #(2) and2_9(w18,w16,O5);
+VLG  and #(2) and2_10(w17,S,I6);
+VLG  dreg #(24) dreg_11(O5,w23,w21,w22,clk1);
+VLG  not #(1) inv_12(w24,S);
+VLG  or #(2) or2_13(w21,w25,w26);
+VLG  and #(2) and2_14(w26,w24,O4);
+VLG  and #(2) and2_15(w25,S,I5);
+VLG  dreg #(24) dreg_16(O4,w31,w29,w30,clk1);
+VLG  not #(1) inv_17(w33,S);
+VLG  or #(2) or2_18(w29,w34,w35);
+VLG  and #(2) and2_19(w35,w33,O3);
+VLG  and #(2) and2_20(w34,S,I4);
+VLG  dreg #(24) dreg_21(O3,w39,w37,w38,clk1);
+VLG  not #(1) inv_22(w40,S);
+VLG  or #(2) or2_23(w37,w41,w42);
+VLG  and #(2) and2_24(w44,S,I0);
+VLG  and #(2) and2_25(w47,w45,in);
+VLG  or #(2) or2_26(w48,w44,w47);
+VLG  not #(1) inv_27(w45,S);
+VLG  and #(2) and2_28(w42,w40,O2);
+VLG  and #(2) and2_29(w41,S,I3);
+VLG  dreg #(24) dreg_30(O2,w53,w51,w52,clk1);
+VLG  dreg #(24) dreg_31(O0,w56,w48,w54,clk1);
+VLG  and #(2) and2_32(w58,S,I1);
+VLG  and #(2) and2_33(w60,w59,O0);
+VLG  or #(2) or2_34(w61,w58,w60);
+VLG  not #(1) inv_35(w59,S);
+VLG  not #(1) inv_36(w62,S);
+VLG  dreg #(24) dreg_37(O1,w65,w61,w63,clk1);
+VLG  and #(2) and2_38(w67,S,I2);
+VLG  and #(2) and2_39(w68,w62,O1);
+VLG  or #(2) or2_40(w51,w67,w68);
+VLG endmodule
+FSYM

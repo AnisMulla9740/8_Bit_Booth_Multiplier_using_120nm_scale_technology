@@ -1,0 +1,106 @@
+USER SYMBOL by DSCH 3.9
+DATE 3/25/2025 3:33:20 PM
+SYM  #equalitychecker
+BB(0,0,40,170)
+TITLE 10 -7  #equalitychecker
+MODEL 6000
+REC(5,5,30,160)
+PIN(0,160,0.00,0.00)B7
+PIN(0,10,0.00,0.00)A0
+PIN(0,100,0.00,0.00)B1
+PIN(0,80,0.00,0.00)A7
+PIN(0,150,0.00,0.00)B6
+PIN(0,30,0.00,0.00)A2
+PIN(0,120,0.00,0.00)B3
+PIN(0,70,0.00,0.00)A6
+PIN(0,130,0.00,0.00)B4
+PIN(0,50,0.00,0.00)A4
+PIN(0,140,0.00,0.00)B5
+PIN(0,60,0.00,0.00)A5
+PIN(0,40,0.00,0.00)A3
+PIN(0,110,0.00,0.00)B2
+PIN(0,20,0.00,0.00)A1
+PIN(0,90,0.00,0.00)B0
+PIN(40,10,2.00,1.00)out
+LIG(0,160,5,160)
+LIG(0,10,5,10)
+LIG(0,100,5,100)
+LIG(0,80,5,80)
+LIG(0,150,5,150)
+LIG(0,30,5,30)
+LIG(0,120,5,120)
+LIG(0,70,5,70)
+LIG(0,130,5,130)
+LIG(0,50,5,50)
+LIG(0,140,5,140)
+LIG(0,60,5,60)
+LIG(0,40,5,40)
+LIG(0,110,5,110)
+LIG(0,20,5,20)
+LIG(0,90,5,90)
+LIG(35,10,40,10)
+LIG(5,5,5,165)
+LIG(5,5,35,5)
+LIG(35,5,35,165)
+LIG(35,165,5,165)
+VLG module equalitychecker( B7,A0,B1,A7,B6,A2,B3,A6,
+VLG  B4,A4,B5,A5,A3,B2,A1,B0,
+VLG  out);
+VLG  input B7,A0,B1,A7,B6,A2,B3,A6;
+VLG  input B4,A4,B5,A5,A3,B2,A1,B0;
+VLG  output out;
+VLG  wire w3,w5,w7,w8,w10,w11,w12,w13;
+VLG  wire w14,w15,w16,w17,w18,w19,w20,w21;
+VLG  wire w22,w23,w25,w27,w28,w29,w32,w34;
+VLG  wire w36,w37,w39,w41,w42,w43,w46,w48;
+VLG  wire w49,w50,w52,w54,w55,w56,w57,w58;
+VLG  wire w59,w60,w61,w62,w63,w64;
+VLG  nand #(12) nand2_1(w5,w3,A0);
+VLG  nand #(12) nand2_2(w7,B0,w3);
+VLG  nand #(13) nand2_3(w3,B0,A0);
+VLG  nand #(12) nand2_4(w8,w7,w5);
+VLG  not #(6) inv_5(w10,w8);
+VLG  and #(18) and2_6(w13,w11,w12);
+VLG  and #(18) and2_7(out,w13,w14);
+VLG  and #(18) and2_8(w14,w15,w16);
+VLG  and #(18) and2_9(w11,w17,w18);
+VLG  and #(18) and2_10(w12,w19,w20);
+VLG  and #(18) and2_11(w15,w21,w22);
+VLG  and #(18) and2_12(w16,w23,w10);
+VLG  nand #(12) nand2_13(w27,w25,A1);
+VLG  nand #(12) nand2_14(w28,B1,w25);
+VLG  nand #(13) nand2_15(w25,B1,A1);
+VLG  nand #(12) nand2_16(w29,w28,w27);
+VLG  not #(6) inv_17(w23,w29);
+VLG  nand #(12) nand2_18(w34,w32,A2);
+VLG  nand #(12) nand2_19(w36,B2,w32);
+VLG  nand #(13) nand2_20(w32,B2,A2);
+VLG  nand #(12) nand2_21(w37,w36,w34);
+VLG  not #(6) inv_22(w22,w37);
+VLG  nand #(12) nand2_23(w41,w39,A3);
+VLG  nand #(12) nand2_24(w42,B3,w39);
+VLG  nand #(13) nand2_25(w39,B3,A3);
+VLG  nand #(12) nand2_26(w43,w42,w41);
+VLG  not #(6) inv_27(w21,w43);
+VLG  nand #(12) nand2_28(w48,w46,A4);
+VLG  nand #(12) nand2_29(w49,B4,w46);
+VLG  nand #(13) nand2_30(w46,B4,A4);
+VLG  nand #(12) nand2_31(w50,w49,w48);
+VLG  not #(6) inv_32(w20,w50);
+VLG  nand #(12) nand2_33(w54,w52,A5);
+VLG  nand #(12) nand2_34(w55,B5,w52);
+VLG  nand #(13) nand2_35(w52,B5,A5);
+VLG  nand #(12) nand2_36(w56,w55,w54);
+VLG  not #(6) inv_37(w19,w56);
+VLG  nand #(12) nand2_38(w58,w57,A6);
+VLG  nand #(12) nand2_39(w59,B6,w57);
+VLG  nand #(13) nand2_40(w57,B6,A6);
+VLG  nand #(12) nand2_41(w60,w59,w58);
+VLG  not #(6) inv_42(w18,w60);
+VLG  nand #(12) nand2_43(w62,w61,A7);
+VLG  nand #(12) nand2_44(w63,B7,w61);
+VLG  nand #(13) nand2_45(w61,B7,A7);
+VLG  nand #(12) nand2_46(w64,w63,w62);
+VLG  not #(6) inv_47(w17,w64);
+VLG endmodule
+FSYM

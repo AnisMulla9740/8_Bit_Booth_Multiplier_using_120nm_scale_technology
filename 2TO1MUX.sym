@@ -1,0 +1,29 @@
+USER SYMBOL by DSCH 3.9
+DATE 3/25/2025 4:32:32 PM
+SYM  #2TO1MUX
+BB(0,0,40,40)
+TITLE 10 -7  #2TO1MUX
+MODEL 6000
+REC(5,5,30,30)
+PIN(0,10,0.00,0.00)i00
+PIN(0,20,0.00,0.00)i10
+PIN(0,30,0.00,0.00)SUM
+PIN(40,10,2.00,1.00)o0
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(35,10,40,10)
+LIG(5,5,5,35)
+LIG(5,5,35,5)
+LIG(35,5,35,35)
+LIG(35,35,5,35)
+VLG module 2TO1MUX( i00,i10,SUM,o0);
+VLG  input i00,i10,SUM;
+VLG  output o0;
+VLG  wire w6,w7,w8;
+VLG  not #(6) inv_1(w6,SUM);
+VLG  or #(18) or2_2(o0,w7,w8);
+VLG  and #(18) and2_3(w8,i10,SUM);
+VLG  and #(18) and2_4(w7,i00,w6);
+VLG endmodule
+FSYM
