@@ -32,7 +32,7 @@ This project implements an 8-bit Booth multiplier using **DSCH** (schematic desi
 - Compare pre-layout (DSCH) and post-layout (Microwind) timing diagrams.
 
 ## Contributors
-- [Your Name]
+- Anis A. Mulla
 
 ## License
-All rights reserved. Update this section with your preferred license.
+All rights reserved. 
